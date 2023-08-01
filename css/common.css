@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap");
 
 body {
   background-color: #eeeee9;
-  color: var(--first-background-color);
 
-  font-family: 'Cardo', serif;
+  font-family: "Cardo", serif;
   font-size: 16px;
   letter-spacing: 0.02em;
   margin: 0;
@@ -73,7 +72,7 @@ img {
   z-index: 1000;
 }
 
-[class$='-container'] {
+[class$="-container"] {
   max-width: 985px;
   margin: 0 auto;
 }
@@ -94,7 +93,7 @@ img {
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -154,20 +153,99 @@ img {
 
 /* HERO */
 
+/* ABOUT */
+
+.about-me {
+  background-color: #282828;
+  margin-top: 94px;
+}
+
+.about-me-box {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.about-me-title {
+  font-family: inherit;
+  font-style: italic;
+  color: #fcfcfc;
+  font-weight: 700;
+  font-size: 80px;
+  text-align: right;
+}
+
+.photos-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.about-me-wrapper {
+  max-width: 450px;
+}
+
+.about-me-text {
+  font-family: inherit;
+  color: #fcfcfc;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.about-me-text-list {
+  list-style: disc;
+}
+
+.about-me-text-list li::marker {
+  color: #caff34;
+}
+
+.about-me-advantage {
+  font-family: inherit;
+  color: #fcfcfc;
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+
+.about-me-advantage:last-child {
+  margin-bottom: 40px;
+}
+
+.about-me-link {
+  font-family: inherit;
+  color: #282828;
+  font-size: 18px;
+  padding: 10px;
+  transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  background-color: #caff34;
+  border-radius: 2px;
+}
+
+.about-me-link:hover {
+  background-color: #7da01e;
+  color: #fcfcfc;
+}
+
+/* ABOUT */
+
 /* FOOTER */
 
 footer {
   background-color: #282828;
+  margin-top: 94px;
 }
 
 .footer-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 94px;
+  padding: 20px;
 }
 
-.footer-contacts {
+.footer-contact-email {
   display: flex;
   justify-content: center;
   gap: 5px;
@@ -175,9 +253,25 @@ footer {
   color: #eeeee9;
   font-size: 18px;
   transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-right: 180px;
 }
 
-.footer-contacts:hover {
+.footer-contact-phone {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  font-family: inherit;
+  color: #eeeee9;
+  font-size: 18px;
+  transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-left: 213px;
+}
+
+.footer-contact-email:hover {
+  color: #caff34;
+}
+
+.footer-contact-phone:hover {
   color: #caff34;
 }
 
@@ -187,21 +281,10 @@ footer {
   fill: #eeeee9;
 }
 
-.footer-title {
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 32px;
-  color: #eeeee9;
-  text-decoration: underline;
-  text-decoration-color: #caff34;
-}
-
 .icons-list {
   display: flex;
   justify-content: center;
   gap: 15px;
-
-  margin-top: 36px;
 }
 
 .icons-item {
@@ -236,6 +319,7 @@ footer {
   color: #6e6e6e;
 
   margin-top: 100px;
+  padding: 10px;
 }
 
 /* FOOTER */
