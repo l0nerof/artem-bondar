@@ -23,7 +23,7 @@
               <a href="#about-me" class="nav-link">Про мене</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Портфоліо</a>
+              <a href="#portfolio" class="nav-link">Портфоліо</a>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link">Послуги та ціни</a>
@@ -32,7 +32,7 @@
               <a href="#" class="nav-link">Відповіді на питання</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Контакти</a>
+              <a href="#contacts" class="nav-link">Контакти</a>
             </li>
           </ul>
         </nav>
@@ -115,11 +115,57 @@
         </div>
       </section>
       <!-- ABOUT ME -->
+
+      <!-- PORTFOLIO -->
+      <section class="portfolio" id="portfolio">
+        <div class="portfolio-container">
+          <h2 class="portfolio-title">Портфоліо</h2>
+          <swiper-container
+            class="mySwiper"
+            pagination="true"
+            pagination-clickable="true"
+            navigation="true"
+            space-between="30"
+            centered-slides="true"
+            autoplay-delay="2500"
+            autoplay-disable-on-interaction="false"
+          >
+            <swiper-slide>
+              <img src="./images/1_3.jpg.webp" alt="portfolio" />
+            </swiper-slide>
+            <swiper-slide>
+              <img src="./images/1_3.jpg.webp" alt="portfolio" />
+            </swiper-slide>
+            <swiper-slide>
+              <img src="./images/1_3.jpg.webp" alt="portfolio" />
+            </swiper-slide>
+            <swiper-slide>
+              <img src="./images/1_3.jpg.webp" alt="portfolio" />
+            </swiper-slide>
+            <swiper-slide>
+              <img src="./images/1_3.jpg.webp" alt="portfolio" />
+            </swiper-slide>
+            <swiper-slide>
+              <img src="./images/1_3.jpg.webp" alt="portfolio" />
+            </swiper-slide>
+            <swiper-slide>
+              <img src="./images/1_3.jpg.webp" alt="portfolio" />
+            </swiper-slide>
+            <swiper-slide>
+              <img src="./images/1_3.jpg.webp" alt="portfolio" />
+            </swiper-slide>
+            <swiper-slide>
+              <img src="./images/1_3.jpg.webp" alt="portfolio" />
+            </swiper-slide>
+          </swiper-container>
+        </div>
+      </section>
+      <!-- PORTFOLIO -->
     </main>
     <!-- MAIN -->
 
     <!-- FOOTER -->
-    <footer class="animate__animated animate__fadeInUp">
+    <footer class="animate__animated animate__fadeInUp" id="contacts">
       <div class="footer-container">
         <div class="footer-wrapper">
           <a href="mailto:1997artem@gmail.com" class="footer-contact-email"
@@ -180,5 +226,6 @@
     </footer>
     <!-- FOOTER -->
     <script src="js/01-color-switcher.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
   </body>
 </html>
