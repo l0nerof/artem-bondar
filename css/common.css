@@ -209,6 +209,7 @@ img {
   cursor: pointer;
   background-color: #caff34;
   border-radius: 20px;
+  border-color: transparent;
 }
 
 .about-me-link:hover {
@@ -256,6 +257,106 @@ swiper-slide img {
 }
 
 /* PORTFOLIO */
+
+/* PRICES */
+
+.prices {
+  background-color: #282828;
+  margin-top: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-image: url("../images/photo.webp");
+  background-repeat: no-repeat;
+  background-position: 50% 40%;
+  background-size: 1200px 450px;
+}
+
+.prices__title {
+  font-family: inherit;
+  font-style: italic;
+  color: #fcfcfc;
+  font-weight: 700;
+  font-size: 80px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.price-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 360px;
+  height: 400px;
+  background-color: #eeeee9;
+  margin: 90px 40px 0;
+}
+
+.card__title {
+  font-family: inherit;
+  color: #282828;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 30px 0 120px 30px;
+}
+
+.card__price {
+  font-family: inherit;
+  color: #6e6e6e;
+  font-weight: bold;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 120px;
+}
+
+.card__button {
+  font-family: inherit;
+  color: #282828;
+  font-size: 16px;
+  padding: 10px;
+  transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  background-color: #caff34;
+  border-radius: 20px;
+  border-color: transparent;
+  width: 80%;
+  margin-left: 40px;
+}
+
+.card__button:hover {
+  background-color: #7da01e;
+  color: #fcfcfc;
+}
+
+/* PRICES */
+
+/* QUESTIONS */
+
+.questions {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.questions__title {
+  font-family: inherit;
+  font-style: italic;
+  color: #282828;
+  font-weight: 700;
+  font-size: 80px;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+/* QUESTIONS */
+
+/* EXTRA-QUESTIONS */
+
+/* EXTRA-QUESTIONS */
 
 /* FOOTER */
 
