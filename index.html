@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/common.css" />
   </head>
   <body>
@@ -65,10 +66,10 @@
       <!-- HERO -->
 
       <!-- ABOUT ME -->
-      <section id="about-me" class="about-me">
+      <section id="about-me" class="about-me" data-aos="fade-up">
         <div class="about-me-container">
-          <h2 class="about-me-title">Про мене</h2>
-          <div class="about-me-box">
+          <h2 class="about-me-title" data-aos="fade-up">Про мене</h2>
+          <div class="about-me-box" data-aos="fade-up">
             <div class="about-me-photos">
               <ul class="photos-list">
                 <li class="photos-list-item">
@@ -89,7 +90,7 @@
                 </li>
               </ul>
             </div>
-            <div class="about-me-wrapper">
+            <div class="about-me-wrapper" data-aos="fade-up">
               <p class="about-me-text">
                 Привіт, мене звати Артем, я займаюсь інтер'єрною візуалізацією
                 та створюю дизайн проекти.
@@ -120,9 +121,9 @@
       <!-- ABOUT ME -->
 
       <!-- PORTFOLIO -->
-      <section class="portfolio" id="portfolio">
+      <section class="portfolio" id="portfolio" data-aos="fade-up">
         <div class="portfolio-container">
-          <h2 class="portfolio-title">Портфоліо</h2>
+          <h2 class="portfolio-title" data-aos="fade-up">Портфоліо</h2>
           <swiper-container
             class="mySwiper"
             pagination="true"
@@ -132,6 +133,7 @@
             centered-slides="true"
             autoplay-delay="2500"
             autoplay-disable-on-interaction="false"
+            data-aos="fade-up"
           >
             <swiper-slide>
               <img src="./images/1_3.jpg.webp" alt="portfolio" />
@@ -166,10 +168,10 @@
       <!-- PORTFOLIO -->
 
       <!-- PRICES -->
-      <section class="prices" id="prices">
+      <section class="prices" id="prices" data-aos="fade-up">
         <div class="prices-container">
-          <h2 class="prices__title">Послуги та ціни</h2>
-          <div class="price-wrapper">
+          <h2 class="prices__title" data-aos="fade-up">Послуги та ціни</h2>
+          <div class="price-wrapper" data-aos="fade-up">
             <div class="card">
               <p class="card__title">3D ВІЗУАЛІЗАЦІЯ</p>
               <p class="card__price">11$ м²</p>
@@ -186,9 +188,11 @@
       <!-- PRICES -->
 
       <!-- QUESTIONS -->
-      <section class="questions" id="questions">
+      <section class="questions" id="questions" data-aos="fade-up">
         <div class="questions-container">
-          <h2 class="questions__title">Відповіді на питання</h2>
+          <h2 class="questions__title" data-aos="fade-up">
+            Відповіді на питання
+          </h2>
         </div>
       </section>
       <!-- QUESTIONS -->
@@ -202,9 +206,9 @@
     <!-- MAIN -->
 
     <!-- FOOTER -->
-    <footer class="animate__animated animate__fadeInUp" id="contacts">
+    <footer id="contacts">
       <div class="footer-container">
-        <div class="footer-wrapper">
+        <div class="footer-wrapper" data-aos="fade-up">
           <a href="mailto:1997artem@gmail.com" class="footer-contact-email"
             ><svg class="contact-icon">
               <use href="./images/symbol-defs.svg#icon-envelop"></use>
@@ -262,7 +266,9 @@
       </div>
     </footer>
     <!-- FOOTER -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/01-color-switcher.js" type="module"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
   </body>
 </html>
