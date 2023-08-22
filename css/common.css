@@ -319,6 +319,8 @@ swiper-slide img {
 
 .card__button {
   font-family: inherit;
+  display: block;
+  text-align: center;
   color: var(--secondary-color);
   font-size: inherit;
   padding: 10px;
@@ -329,7 +331,7 @@ swiper-slide img {
   border-radius: 20px;
   border-color: transparent;
   width: 80%;
-  margin-left: 40px;
+  margin-left: 30px;
 }
 
 .card__button:hover {
@@ -439,15 +441,118 @@ swiper-slide img {
 
 /* QUESTIONS */
 
-/* EXTRA-QUESTIONS */
+/* CONTACTS */
 
-/* EXTRA-QUESTIONS */
+.contacts {
+  background-color: var(--secondary-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.contacts__title {
+  font-family: inherit;
+  color: var(--text-color);
+  font-size: 80px;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.contacts__box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts__wrapper {
+  max-width: 450px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.user-box {
+  position: relative;
+  width: 100%;
+}
+
+.form__name {
+  width: 100%;
+  height: 44px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--main-color);
+  outline: none;
+  margin-bottom: 60px;
+  color: var(--text-color);
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.form__phone {
+  width: 100%;
+  height: 44px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--main-color);
+  outline: none;
+  margin-bottom: 100px;
+  color: var(--text-color);
+  font-size: 12px;
+  font-family: inherit;
+}
+
+label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px 0;
+  font-size: inherit;
+  font-family: inherit;
+  color: var(--text-color);
+  pointer-events: none;
+  transition: all var(--main-animation);
+}
+
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: var(--hover-color);
+  font-size: 14px;
+}
+
+.wrapper-photos__list {
+  display: flex;
+  gap: 15px;
+}
+
+.contacts__button {
+  font-family: inherit;
+  color: var(--secondary-color);
+  font-size: inherit;
+  padding: 10px;
+  transition: background-color var(--main-animation),
+    color var(--main-animation);
+  cursor: pointer;
+  background-color: var(--hover-color);
+  border-radius: 20px;
+  border-color: transparent;
+  width: 50%;
+}
+
+.contacts__button:hover {
+  background-color: var(--darker-hover-color);
+  color: var(--text-color);
+}
+
+/* CONTACTS */
 
 /* FOOTER */
 
 footer {
   background-color: var(--secondary-color);
-  margin-top: 94px;
 }
 
 .footer-wrapper {
@@ -464,8 +569,9 @@ footer {
   font-family: inherit;
   color: var(--optional-color);
   font-size: inherit;
-  transition: color var(--main-animation);
+  transition: color var(--main-animation), fill var(--main-animation);
   margin-right: 180px;
+  fill: var(--optional-color);
 }
 
 .footer-contact-phone {
@@ -475,22 +581,24 @@ footer {
   font-family: inherit;
   color: var(--optional-color);
   font-size: inherit;
-  transition: color var(--main-animation);
+  transition: color var(--main-animation), fill var(--main-animation);
   margin-left: 213px;
+  fill: var(--optional-color);
 }
 
 .footer-contact-email:hover {
   color: var(--hover-color);
+  fill: var(--hover-color);
 }
 
 .footer-contact-phone:hover {
   color: var(--hover-color);
+  fill: var(--hover-color);
 }
 
 .contact-icon {
   width: 20px;
   height: 20px;
-  fill: var(--optional-color);
 }
 
 .icons-list {

@@ -66,7 +66,7 @@
       <!-- HERO -->
 
       <!-- ABOUT ME -->
-      <section id="about-me" class="about-me" data-aos="fade-up">
+      <section id="about-me" class="about-me">
         <div class="about-me-container">
           <h2 class="about-me-title" data-aos="fade-up">Про мене</h2>
           <div class="about-me-box" data-aos="fade-up">
@@ -113,7 +113,9 @@
                   досягнення максимального результату.
                 </li>
               </ul>
-              <a href="#form" class="about-me-link">Замовити послугу &#8594;</a>
+              <a href="#contacts" class="about-me-link"
+                >Замовити послугу &#8594;</a
+              >
             </div>
           </div>
         </div>
@@ -175,12 +177,12 @@
             <div class="card">
               <p class="card__title">3D ВІЗУАЛІЗАЦІЯ</p>
               <p class="card__price">11$ м²</p>
-              <button type="button" class="card__button">ЗАМОВИТИ</button>
+              <a href="#contact" class="card__button">ЗАМОВИТИ</a>
             </div>
             <div class="card">
               <p class="card__title">ДИЗАЙН ПРОЕКТ</p>
               <p class="card__price">27$ м²</p>
-              <button type="button" class="card__button">ЗАМОВИТИ</button>
+              <a href="#contacts" class="card__button">ЗАМОВИТИ</a>
             </div>
           </div>
         </div>
@@ -450,16 +452,55 @@
       </section>
       <!-- QUESTIONS -->
 
-      <!-- EXTRA QUESTIONS -->
-      <section class="extra-questions" id="extra-questions">
-        <div class="extra-questions-container"></div>
+      <!-- CONTACTS -->
+      <section class="contacts" id="contacts" data-aos="fade-up">
+        <div class="contacts-container">
+          <h2 class="contacts__title" data-aos="fade-up">ЗАВЖДИ НА ЗВ`ЯЗКУ</h2>
+          <div class="contacts__box" data-aos="fade-up">
+            <div class="box__form">
+              <form action="#" class="form">
+                <div class="user-box">
+                  <input id="name" type="text" class="form__name" required />
+                  <label for="name">Ім`я</label>
+                </div>
+                <div class="user-box">
+                  <input id="phone" type="text" class="form__phone" required />
+                  <label for="phone">Телефон</label>
+                </div>
+                <button type="submit" class="contacts__button">
+                  Відправити
+                </button>
+              </form>
+            </div>
+            <div class="contacts__wrapper" data-aos="fade-up">
+              <ul class="wrapper-photos__list">
+                <li class="list__item">
+                  <img
+                    src="./images/2.jpeg.webp"
+                    alt="Kitchen"
+                    class="item__photo"
+                    loading="lazy"
+                  />
+                </li>
+                <li class="list__item">
+                  <img
+                    src="./images/1_3.jpg.webp"
+                    alt=""
+                    class="item__photo"
+                    loading="lazy"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
-      <!-- EXTRA QUESTIONS -->
+      <!-- CONTACTS -->
     </main>
     <!-- MAIN -->
 
     <!-- FOOTER -->
-    <footer id="contacts">
+    <footer>
       <div class="footer-container">
         <div class="footer-wrapper" data-aos="fade-up">
           <a href="mailto:1997artem@gmail.com" class="footer-contact-email"
