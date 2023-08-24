@@ -15,28 +15,28 @@
     <!-- HEADER -->
     <header class="header animate__animated animate__fadeInDown">
       <div class="header-container">
-        <nav class="navigation">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="#hero" class="nav-link">Головна</a>
+        <nav class="header__navigation">
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="#hero" class="header__link">Головна</a>
             </li>
-            <li class="nav-item">
-              <a href="#about-me" class="nav-link">Про мене</a>
+            <li class="header__item">
+              <a href="#about-me" class="header__link">Про мене</a>
             </li>
-            <li class="nav-item">
-              <a href="#portfolio" class="nav-link">Портфоліо</a>
+            <li class="header__item">
+              <a href="#portfolio" class="header__link">Портфоліо</a>
             </li>
-            <li class="nav-item">
-              <a href="#prices" class="nav-link">Послуги та ціни</a>
+            <li class="header__item">
+              <a href="#prices" class="header__link">Послуги та ціни</a>
             </li>
-            <li class="nav-item">
-              <a href="#questions" class="nav-link">Відповіді на питання</a>
+            <li class="header__item">
+              <a href="#questions" class="header__link">Відповіді на питання</a>
             </li>
-            <!-- <li class="nav-item">
-              <a href="#extra-questions" class="nav-link">Інформація</a>
+            <!-- <li class="header__item">
+              <a href="#extra-questions" class="header__link">Інформація</a>
             </li> -->
-            <li class="nav-item">
-              <a href="#contacts" class="nav-link">Контакти</a>
+            <li class="header__item">
+              <a href="#contacts" class="header__link">Контакти</a>
             </li>
           </ul>
         </nav>
@@ -49,15 +49,15 @@
       <!-- HERO -->
       <section id="hero" class="hero">
         <div class="hero-container">
-          <div class="hero-info-wrapper animate__animated animate__fadeInLeft">
-            <h1 class="hero-title">ARTEM BONDAR</h1>
-            <p class="hero-text">Interior designer | CG artist</p>
+          <div class="hero-wrapper animate__animated animate__fadeInLeft">
+            <h1 class="hero__title">ARTEM BONDAR</h1>
+            <p class="hero__text">Interior designer | CG artist</p>
           </div>
-          <div class="hero-img-wrapper animate__animated animate__fadeInRight">
+          <div class="hero-img__wrapper animate__animated animate__fadeInRight">
             <img
               src="./images/1.jpeg.webp"
               alt="interior"
-              class="hero-img"
+              class="hero__img"
               loading="lazy"
             />
           </div>
@@ -68,52 +68,52 @@
       <!-- ABOUT ME -->
       <section id="about-me" class="about-me">
         <div class="about-me-container">
-          <h2 class="about-me-title" data-aos="fade-up">Про мене</h2>
-          <div class="about-me-box" data-aos="fade-up">
-            <div class="about-me-photos">
-              <ul class="photos-list">
-                <li class="photos-list-item">
+          <h2 class="about-me__title" data-aos="fade-up">Про мене</h2>
+          <div class="about-me__box" data-aos="fade-up">
+            <div class="about-me__photos">
+              <ul class="about-me__list">
+                <li class="about-me__item">
                   <img
                     src="./images/2.jpeg.webp"
                     alt="Kitchen"
-                    class="photo-about-me"
+                    class="about-me__photo"
                     loading="lazy"
                   />
                 </li>
-                <li class="photos-list-item">
+                <li class="about-me__item">
                   <img
                     src="./images/IMG_5945.jpg.webp"
                     alt="Artem is walking"
-                    class="photo-about-me"
+                    class="about-me__photo"
                     loading="lazy"
                   />
                 </li>
               </ul>
             </div>
             <div class="about-me-wrapper" data-aos="fade-up">
-              <p class="about-me-text">
+              <p class="about-me__text">
                 Привіт, мене звати Артем, я займаюсь інтер'єрною візуалізацією
                 та створюю дизайн проекти.
               </p>
-              <ul class="about-me-text-list">
-                <li class="about-me-advantage">
+              <ul class="about-me__text-list">
+                <li class="about-me__advantage">
                   Маю 6 років практичного досвіду у створенні дизайн проектів та
                   3D візуалізацій.
                 </li>
-                <li class="about-me-advantage">
+                <li class="about-me__advantage">
                   Я зациклений на якісній роботі, постійно намагаюсь довести
                   результат до ідеалу.
                 </li>
-                <li class="about-me-advantage">
+                <li class="about-me__advantage">
                   Постійно вдосконалюю свої знання, проходжу майстер класи та
                   інтенсиви.
                 </li>
-                <li class="about-me-advantage">
+                <li class="about-me__advantage">
                   Вважаю, що між замовником та мною має бути повна довіра для
                   досягнення максимального результату.
                 </li>
               </ul>
-              <a href="#contacts" class="about-me-link"
+              <a href="#contacts" class="about-me__link"
                 >Замовити послугу &#8594;</a
               >
             </div>
@@ -123,9 +123,9 @@
       <!-- ABOUT ME -->
 
       <!-- PORTFOLIO -->
-      <section class="portfolio" id="portfolio" data-aos="fade-up">
+      <section class="portfolio" id="portfolio">
         <div class="portfolio-container">
-          <h2 class="portfolio-title" data-aos="fade-up">Портфоліо</h2>
+          <h2 class="portfolio__title" data-aos="fade-up">Портфоліо</h2>
           <swiper-container
             class="mySwiper"
             pagination="true"
@@ -138,31 +138,31 @@
             data-aos="fade-up"
           >
             <swiper-slide>
-              <img src="./images/1_3.jpg.webp" alt="portfolio" />
+              <img src="./images/1_3.jpg.webp" alt="portfolio" loading="lazy" />
             </swiper-slide>
             <swiper-slide>
-              <img src="./images/1_3.jpg.webp" alt="portfolio" />
+              <img src="./images/1_3.jpg.webp" alt="portfolio" loading="lazy" />
             </swiper-slide>
             <swiper-slide>
-              <img src="./images/1_3.jpg.webp" alt="portfolio" />
+              <img src="./images/1_3.jpg.webp" alt="portfolio" loading="lazy" />
             </swiper-slide>
             <swiper-slide>
-              <img src="./images/1_3.jpg.webp" alt="portfolio" />
+              <img src="./images/1_3.jpg.webp" alt="portfolio" loading="lazy" />
             </swiper-slide>
             <swiper-slide>
-              <img src="./images/1_3.jpg.webp" alt="portfolio" />
+              <img src="./images/1_3.jpg.webp" alt="portfolio" loading="lazy" />
             </swiper-slide>
             <swiper-slide>
-              <img src="./images/1_3.jpg.webp" alt="portfolio" />
+              <img src="./images/1_3.jpg.webp" alt="portfolio" loading="lazy" />
             </swiper-slide>
             <swiper-slide>
-              <img src="./images/1_3.jpg.webp" alt="portfolio" />
+              <img src="./images/1_3.jpg.webp" alt="portfolio" loading="lazy" />
             </swiper-slide>
             <swiper-slide>
-              <img src="./images/1_3.jpg.webp" alt="portfolio" />
+              <img src="./images/1_3.jpg.webp" alt="portfolio" loading="lazy" />
             </swiper-slide>
             <swiper-slide>
-              <img src="./images/1_3.jpg.webp" alt="portfolio" />
+              <img src="./images/1_3.jpg.webp" alt="portfolio" loading="lazy" />
             </swiper-slide>
           </swiper-container>
         </div>
@@ -170,16 +170,16 @@
       <!-- PORTFOLIO -->
 
       <!-- PRICES -->
-      <section class="prices" id="prices" data-aos="fade-up">
+      <section class="prices" id="prices">
         <div class="prices-container">
           <h2 class="prices__title" data-aos="fade-up">Послуги та ціни</h2>
           <div class="price-wrapper" data-aos="fade-up">
-            <div class="card">
+            <div class="prices__card">
               <p class="card__title">3D ВІЗУАЛІЗАЦІЯ</p>
               <p class="card__price">11$ м²</p>
-              <a href="#contact" class="card__button">ЗАМОВИТИ</a>
+              <a href="#contacts" class="card__button">ЗАМОВИТИ</a>
             </div>
-            <div class="card">
+            <div class="prices__card">
               <p class="card__title">ДИЗАЙН ПРОЕКТ</p>
               <p class="card__price">27$ м²</p>
               <a href="#contacts" class="card__button">ЗАМОВИТИ</a>
@@ -190,12 +190,12 @@
       <!-- PRICES -->
 
       <!-- QUESTIONS -->
-      <section class="questions" id="questions" data-aos="fade-up">
+      <section class="questions" id="questions">
         <div class="questions-container">
           <h2 class="questions__title" data-aos="fade-up">
             Відповіді на питання
           </h2>
-          <div class="faq">
+          <div class="faq" data-aos="fade-up">
             <div class="question">
               <p class="question__text">
                 Що входить до послуги 3D візуалізація?
@@ -226,7 +226,7 @@
             </div>
           </div>
 
-          <div class="faq">
+          <div class="faq" data-aos="fade-up">
             <div class="question">
               <p class="question__text">
                 Які умови у роботі з 3D візуалізацією?
@@ -262,7 +262,7 @@
             </div>
           </div>
 
-          <div class="faq">
+          <div class="faq" data-aos="fade-up">
             <div class="question">
               <p class="question__text">
                 Які є додаткові послуги у роботі з 3D візуалізацією?
@@ -293,7 +293,7 @@
             </div>
           </div>
 
-          <div class="faq">
+          <div class="faq" data-aos="fade-up">
             <div class="question">
               <p class="question__text">
                 Що входить у ТЗ для роботи з 3D візуалізацією?
@@ -326,7 +326,7 @@
             </div>
           </div>
 
-          <div class="faq">
+          <div class="faq" data-aos="fade-up">
             <div class="question">
               <p class="question__text">Що входить до послуги Дизайн проект?</p>
               <svg class="question__icon">
@@ -391,7 +391,7 @@
             </div>
           </div>
 
-          <div class="faq">
+          <div class="faq" data-aos="fade-up">
             <div class="question">
               <p class="question__text">
                 Які є додаткові послуги у роботі з Дизайн проектом?
@@ -453,18 +453,28 @@
       <!-- QUESTIONS -->
 
       <!-- CONTACTS -->
-      <section class="contacts" id="contacts" data-aos="fade-up">
+      <section class="contacts" id="contacts">
         <div class="contacts-container">
           <h2 class="contacts__title" data-aos="fade-up">ЗАВЖДИ НА ЗВ`ЯЗКУ</h2>
-          <div class="contacts__box" data-aos="fade-up">
-            <div class="box__form">
-              <form action="#" class="form">
-                <div class="user-box">
-                  <input id="name" type="text" class="form__name" required />
+          <div class="contacts-box" data-aos="fade-up">
+            <div class="contacts__form-wrapper">
+              <form action="#" class="contacts__form">
+                <div class="contacts__user-box">
+                  <input
+                    id="name"
+                    type="text"
+                    class="contacts__form-name"
+                    required
+                  />
                   <label for="name">Ім`я</label>
                 </div>
-                <div class="user-box">
-                  <input id="phone" type="text" class="form__phone" required />
+                <div class="contacts__user-box">
+                  <input
+                    id="phone"
+                    type="text"
+                    class="contacts__form-phone"
+                    required
+                  />
                   <label for="phone">Телефон</label>
                 </div>
                 <button type="submit" class="contacts__button">
@@ -472,21 +482,21 @@
                 </button>
               </form>
             </div>
-            <div class="contacts__wrapper" data-aos="fade-up">
-              <ul class="wrapper-photos__list">
-                <li class="list__item">
+            <div class="contacts-wrapper" data-aos="fade-up">
+              <ul class="contacts__list">
+                <li class="contacts__item">
                   <img
                     src="./images/2.jpeg.webp"
                     alt="Kitchen"
-                    class="item__photo"
+                    class="contacts__photo"
                     loading="lazy"
                   />
                 </li>
-                <li class="list__item">
+                <li class="contacts__item">
                   <img
                     src="./images/1_3.jpg.webp"
                     alt=""
-                    class="item__photo"
+                    class="contacts__photo"
                     loading="lazy"
                   />
                 </li>
@@ -503,60 +513,60 @@
     <footer>
       <div class="footer-container">
         <div class="footer-wrapper" data-aos="fade-up">
-          <a href="mailto:1997artem@gmail.com" class="footer-contact-email"
-            ><svg class="contact-icon">
+          <a href="mailto:1997artem@gmail.com" class="footer__contact-email"
+            ><svg class="contact__icon">
               <use href="./images/symbol-defs.svg#icon-envelop"></use>
             </svg>
             1997artem@gmail.com</a
           >
-          <ul class="icons-list">
-            <li class="icons-item">
+          <ul class="footer__list">
+            <li class="footer__item">
               <a
                 href="https://www.facebook.com/ttimmytturner0/"
-                class="icons-link"
+                class="footer__link"
               >
-                <svg class="footer-icon">
+                <svg class="footer__icon">
                   <use href="./images/symbol-defs.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
-            <li class="icons-item">
+            <li class="footer__item">
               <a
                 href="https://www.behance.net/ttimmytturner"
-                class="icons-link"
+                class="footer__link"
               >
-                <svg class="footer-icon">
+                <svg class="footer__icon">
                   <use href="./images/symbol-defs.svg#icon-behance"></use>
                 </svg>
               </a>
             </li>
-            <li class="icons-item">
+            <li class="footer__item">
               <a
                 href="https://www.instagram.com/ttimmytturner/?utm_medium=copy_link"
-                class="icons-link"
+                class="footer__link"
               >
-                <svg class="footer-icon">
+                <svg class="footer__icon">
                   <use href="./images/symbol-defs.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
-            <li class="icons-item">
-              <a href="https://t.me/ttimmytturner" class="icons-link">
-                <svg class="footer-icon">
+            <li class="footer__item">
+              <a href="https://t.me/ttimmytturner" class="footer__link">
+                <svg class="footer__icon">
                   <use href="./images/symbol-defs.svg#icon-telegram"></use>
                 </svg>
               </a>
             </li>
           </ul>
-          <a href="tel:+38 095 127 07 25" class="footer-contact-phone"
-            ><svg class="contact-icon">
+          <a href="tel:+38 095 127 07 25" class="footer__contact-phone"
+            ><svg class="contact__icon">
               <use href="./images/symbol-defs.svg#icon-phone"></use>
             </svg>
             +38 095 127 07 25</a
           >
         </div>
 
-        <p class="footer-ending-text">© Bondar Design, 2023.</p>
+        <p class="footer__text">© Bondar Design, 2023.</p>
       </div>
     </footer>
     <!-- FOOTER -->
