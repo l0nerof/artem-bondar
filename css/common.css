@@ -129,7 +129,6 @@ img {
   }
 
   .card__title {
-    font-size: 24px;
     text-align: center;
     margin: 30px 0 70px 0;
   }
@@ -182,6 +181,10 @@ img {
     width: 480px;
     margin: 0 auto;
   }
+
+  .prices__card {
+    margin: 90px 0 0 80px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -189,20 +192,17 @@ img {
     width: 768px;
     margin: 0 auto;
   }
-}
 
-@media screen and (min-width: 985px) {
-  [class$="-container"] {
-    width: 985px;
-    margin: 0 auto;
+  .hero__title {
+    font-size: 80px;
   }
 
   .header__navigation {
     display: block;
   }
 
-  .hero__title {
-    font-size: 80px;
+  .header__link {
+    padding: 11px 1px;
   }
 
   .hero__text {
@@ -224,6 +224,7 @@ img {
 
   .about-me-wrapper {
     margin-top: 0;
+    margin-left: 20px;
   }
 
   .portfolio__title {
@@ -231,11 +232,11 @@ img {
   }
 
   swiper-container {
-    height: 600px;
+    height: 500px;
   }
 
   .prices {
-    background-size: 1200px 450px;
+    background-size: 820px 350px;
   }
 
   .prices__title {
@@ -250,21 +251,7 @@ img {
 
   .prices__card {
     width: 360px;
-    height: 400px;
     margin: 90px 40px 0;
-  }
-
-  .card__title {
-    font-size: 24px;
-    margin: 30px 0 120px 30px;
-  }
-
-  .card__price {
-    margin-bottom: 120px;
-  }
-
-  .card__button {
-    margin-left: 30px;
   }
 
   .questions__title {
@@ -272,7 +259,7 @@ img {
   }
 
   .question__text {
-    max-width: 960px;
+    max-width: 500px;
   }
 
   .contacts__title {
@@ -284,6 +271,10 @@ img {
     display: block;
   }
 
+  .contacts__form-wrapper {
+    max-width: 280px;
+  }
+
   .footer-wrapper {
     display: flex;
     justify-content: space-between;
@@ -291,17 +282,72 @@ img {
   }
 
   .footer__contact-email {
-    margin-right: 180px;
     margin-top: 0;
   }
 
   .footer__contact-phone {
-    margin-left: 213px;
+    margin-left: 32px;
   }
 
   .footer__list {
     margin-top: 0;
     margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 985px) {
+  [class$="-container"] {
+    width: 985px;
+    margin: 0 auto;
+  }
+
+  .header__link {
+    padding: 11px 18px;
+  }
+
+  .about-me-wrapper {
+    margin-left: 0;
+  }
+
+  swiper-container {
+    height: 600px;
+  }
+
+  .prices {
+    background-size: 1200px 450px;
+  }
+
+  .prices__card {
+    height: 400px;
+  }
+
+  .card__title {
+    text-align: unset;
+    margin: 30px 0 120px 30px;
+  }
+
+  .card__price {
+    margin-bottom: 120px;
+  }
+
+  .card__button {
+    margin-left: 30px;
+  }
+
+  .question__text {
+    max-width: 960px;
+  }
+
+  .contacts__form-wrapper {
+    max-width: 470px;
+  }
+
+  .footer__contact-email {
+    margin-right: 180px;
+  }
+
+  .footer__contact-phone {
+    margin-left: 213px;
   }
 }
 
@@ -325,7 +371,7 @@ img {
 
 .header__link {
   position: relative;
-  padding: 11px 18px;
+
   font-family: inherit;
   font-size: inherit;
   color: var(--text-color);
@@ -397,7 +443,6 @@ img {
 }
 
 .about-me__box {
-  /* display: flex; */
   margin-top: 20px;
 }
 
@@ -474,7 +519,6 @@ img {
 .portfolio__title {
   font-family: inherit;
   color: var(--secondary-color);
-  /* font-size: 80px; */
   text-align: left;
   margin-bottom: 40px;
 }
@@ -523,30 +567,24 @@ swiper-container::part(button-next) {
   background-image: url("../images/photo.webp");
   background-repeat: no-repeat;
   background-position: 50% 40%;
-  /* background-size: 1200px 450px; */
 }
 
 .prices__title {
   font-family: inherit;
   color: var(--text-color);
-  /* font-size: 80px; */
   text-align: center;
   margin-bottom: 40px;
 }
 
 .prices__card {
-  /* width: 360px;
-  height: 400px; */
   background-color: var(--optional-color);
-  /* margin: 90px 40px 0; */
 }
 
 .card__title {
   font-family: inherit;
   color: var(--secondary-color);
   font-weight: bold;
-  /* font-size: 24px; */
-  /* margin: 30px 0 120px 30px; */
+  font-size: 24px;
 }
 
 .card__price {
@@ -557,7 +595,6 @@ swiper-container::part(button-next) {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-bottom: 120px; */
 }
 
 .card__button {
@@ -574,7 +611,6 @@ swiper-container::part(button-next) {
   border-radius: 20px;
   border-color: transparent;
   width: 80%;
-  /* margin-left: 30px; */
 }
 
 .card__button:hover {
@@ -594,7 +630,6 @@ swiper-container::part(button-next) {
 .questions__title {
   font-family: inherit;
   color: var(--secondary-color);
-  /* font-size: 80px; */
   text-align: left;
   margin-bottom: 40px;
 }
@@ -695,18 +730,12 @@ swiper-container::part(button-next) {
 .contacts__title {
   font-family: inherit;
   color: var(--text-color);
-  /* font-size: 80px; */
   text-align: left;
-  /* margin-bottom: 40px; */
 }
 
 .contacts-box {
   display: flex;
   justify-content: space-between;
-}
-
-.contacts__form-wrapper {
-  max-width: 470px;
 }
 
 .contacts__form {
@@ -815,7 +844,6 @@ footer {
   color: var(--optional-color);
   font-size: inherit;
   transition: color var(--main-animation), fill var(--main-animation);
-  /* margin-right: 180px; */
   fill: var(--optional-color);
 }
 
@@ -827,7 +855,6 @@ footer {
   color: var(--optional-color);
   font-size: inherit;
   transition: color var(--main-animation), fill var(--main-animation);
-  /* margin-left: 213px; */
   fill: var(--optional-color);
 }
 
