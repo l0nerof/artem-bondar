@@ -23,7 +23,7 @@
 body {
   background-color: var(--main-color);
   font-family: var(--main-font);
-  font-size: 16px;
+  font-size: 1rem;
   letter-spacing: 0.02em;
   margin: 0;
 }
@@ -73,8 +73,103 @@ img {
     margin: 0 auto;
   }
 
+  .header__menu-icon {
+    display: block;
+    width: 1.875rem;
+    height: 1.125rem;
+    position: relative;
+    left: 91%;
+    z-index: 5;
+    cursor: pointer;
+  }
+
+  .header__menu-icon span,
+  .header__menu-icon::before,
+  .header__menu-icon::after {
+    position: absolute;
+    left: 0;
+    height: 10%;
+    width: 100%;
+    transition: all var(--main-animation);
+    background-color: var(--main-color);
+  }
+
+  .header__menu-icon::before,
+  .header__menu-icon::after {
+    content: "";
+  }
+
+  .header__menu-icon::before {
+    top: 0;
+  }
+
+  .header__menu-icon::after {
+    bottom: 0;
+  }
+
+  .header__menu-icon span {
+    top: 50%;
+    transform: scale(1) translate(0px, -50%);
+  }
+
+  .active span {
+    transform: scale(0) translate(0px, -50%);
+  }
+
+  .active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0px, -50%);
+  }
+
+  .active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0px, 50%);
+  }
+
+  .header__menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 100%;
+    left: 0;
+    transform: translateX(100%);
+    z-index: 20;
+    background-color: var(--secondary-color);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity var(--main-animation), transform var(--main-animation),
+      visibility var(--main-animation);
+  }
+
+  .is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+  }
+
+  .menu__list {
+    margin-top: 1.25rem;
+  }
+
+  .menu__item:not(:last-child) {
+    margin-bottom: 1.875rem;
+  }
+
+  .menu__link {
+    font-family: inherit;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    transition: color var(--main-animation);
+  }
+
+  .menu__link:hover {
+    color: var(--hover-color);
+  }
+
   .hero__title {
-    font-size: 60px;
+    font-size: 3.75rem;
   }
 
   .header__navigation {
@@ -82,7 +177,7 @@ img {
   }
 
   .hero__text {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 
   .hero__img {
@@ -94,15 +189,15 @@ img {
   }
 
   .about-me__title {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
 
   .about-me-wrapper {
-    margin-top: 20px;
+    margin-top: 1.25rem;
   }
 
   .portfolio__title {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
 
   swiper-container {
@@ -114,7 +209,7 @@ img {
   }
 
   .prices__title {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
 
   .price-wrapper {
@@ -124,25 +219,25 @@ img {
   .prices__card {
     width: 300px;
     height: 300px;
-    margin: 90px 0 0;
-    padding: 10px;
+    margin: 5.625rem 0 0;
+    padding: 0.625rem;
   }
 
   .card__title {
     text-align: center;
-    margin: 30px 0 70px 0;
+    margin: 1.875rem 0 4.375rem 0;
   }
 
   .card__price {
-    margin-bottom: 70px;
+    margin-bottom: 4.375rem;
   }
 
   .card__button {
-    margin-left: 20px;
+    margin-left: 1.25rem;
   }
 
   .questions__title {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
 
   .question__text {
@@ -150,8 +245,8 @@ img {
   }
 
   .contacts__title {
-    font-size: 40px;
-    margin-bottom: 80px;
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
   }
 
   .contacts-wrapper {
@@ -163,7 +258,7 @@ img {
   }
 
   .footer__contact-email {
-    margin-top: 10px;
+    margin-top: 0.625rem;
   }
 
   .footer__contact-phone {
@@ -171,8 +266,8 @@ img {
   }
 
   .footer__list {
-    margin-top: 70px;
-    margin-bottom: 70px;
+    margin-top: 4.375rem;
+    margin-bottom: 4.375rem;
   }
 }
 
@@ -183,7 +278,7 @@ img {
   }
 
   .prices__card {
-    margin: 90px 0 0 80px;
+    margin: 5.625rem 0 0 5rem;
   }
 }
 
@@ -193,8 +288,12 @@ img {
     margin: 0 auto;
   }
 
+  .header__menu-icon {
+    display: none;
+  }
+
   .hero__title {
-    font-size: 80px;
+    font-size: 5rem;
   }
 
   .header__navigation {
@@ -202,11 +301,11 @@ img {
   }
 
   .header__link {
-    padding: 11px 1px;
+    padding: 0.6875rem 0.0625rem;
   }
 
   .hero__text {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 
   .hero__img {
@@ -219,16 +318,16 @@ img {
   }
 
   .about-me__title {
-    font-size: 80px;
+    font-size: 5rem;
   }
 
   .about-me-wrapper {
     margin-top: 0;
-    margin-left: 20px;
+    margin-left: 1.25rem;
   }
 
   .portfolio__title {
-    font-size: 80px;
+    font-size: 5rem;
   }
 
   swiper-container {
@@ -240,7 +339,7 @@ img {
   }
 
   .prices__title {
-    font-size: 80px;
+    font-size: 5rem;
   }
 
   .price-wrapper {
@@ -251,11 +350,11 @@ img {
 
   .prices__card {
     width: 360px;
-    margin: 90px 40px 0;
+    margin: 5.625rem 2.5rem 0;
   }
 
   .questions__title {
-    font-size: 80px;
+    font-size: 5rem;
   }
 
   .question__text {
@@ -263,8 +362,8 @@ img {
   }
 
   .contacts__title {
-    font-size: 80px;
-    margin-bottom: 40px;
+    font-size: 5rem;
+    margin-bottom: 2.5rem;
   }
 
   .contacts-wrapper {
@@ -286,7 +385,7 @@ img {
   }
 
   .footer__contact-phone {
-    margin-left: 32px;
+    margin-left: 2rem;
   }
 
   .footer__list {
@@ -302,7 +401,7 @@ img {
   }
 
   .header__link {
-    padding: 11px 18px;
+    padding: 0.6875rem 1.125rem;
   }
 
   .about-me-wrapper {
@@ -323,15 +422,15 @@ img {
 
   .card__title {
     text-align: unset;
-    margin: 30px 0 120px 30px;
+    margin: 1.875rem 0 7.5rem 1.875rem;
   }
 
   .card__price {
-    margin-bottom: 120px;
+    margin-bottom: 7.5rem;
   }
 
   .card__button {
-    margin-left: 30px;
+    margin-left: 1.875rem;
   }
 
   .question__text {
@@ -343,11 +442,11 @@ img {
   }
 
   .footer__contact-email {
-    margin-right: 180px;
+    margin-right: 11.25rem;
   }
 
   .footer__contact-phone {
-    margin-left: 213px;
+    margin-left: 13.3125rem;
   }
 }
 
@@ -357,7 +456,7 @@ img {
 
 .header {
   position: fixed;
-  padding: 30px 0;
+  padding: 1.875rem 0;
   width: 100%;
   background-color: var(--secondary-color);
   z-index: 1000;
@@ -366,12 +465,11 @@ img {
 .header__list {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 1.875rem;
 }
 
 .header__link {
   position: relative;
-
   font-family: inherit;
   font-size: inherit;
   color: var(--text-color);
@@ -383,7 +481,7 @@ img {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 2px;
+  height: 0.125rem;
   background-color: var(--hover-color);
   width: 100%;
   transform: scaleX(0);
@@ -403,7 +501,7 @@ img {
 /* HERO */
 
 .hero {
-  padding-top: 149px;
+  padding-top: 9.3125rem;
 }
 
 .hero-container {
@@ -419,11 +517,10 @@ img {
 
 .hero__text {
   font-family: inherit;
-  /* font-size: 24px; */
   color: var(--secondary-color);
   background-color: var(--hover-color);
   max-width: 421px;
-  margin-top: 42px;
+  margin-top: 2.625rem;
 }
 
 .hero__img {
@@ -437,26 +534,25 @@ img {
 
 .about-me {
   background-color: var(--secondary-color);
-  margin-top: 94px;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  margin-top: 5.875rem;
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
 }
 
 .about-me__box {
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .about-me__title {
   font-family: inherit;
   color: var(--text-color);
-  /* font-size: 80px; */
   text-align: right;
 }
 
 .about-me__list {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 0.9375rem;
 }
 
 .about-me-wrapper {
@@ -467,7 +563,7 @@ img {
   font-family: inherit;
   color: var(--text-color);
   font-size: inherit;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .about-me__text-list {
@@ -482,24 +578,24 @@ img {
   font-family: inherit;
   color: var(--text-color);
   font-size: inherit;
-  margin-bottom: 10px;
-  margin-left: 15px;
+  margin-bottom: 0.625rem;
+  margin-left: 0.9375rem;
 }
 
 .about-me__advantage:last-child {
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 
 .about-me__link {
   font-family: inherit;
   color: var(--secondary-color);
   font-size: inherit;
-  padding: 10px;
+  padding: 0.625rem;
   transition: background-color var(--main-animation),
     color var(--main-animation);
   cursor: pointer;
   background-color: var(--hover-color);
-  border-radius: 20px;
+  border-radius: 1.25rem;
   border-color: transparent;
 }
 
@@ -513,14 +609,14 @@ img {
 /* PORTFOLIO */
 
 .portfolio {
-  margin-top: 60px;
+  margin-top: 3.75rem;
 }
 
 .portfolio__title {
   font-family: inherit;
   color: var(--secondary-color);
   text-align: left;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 
 swiper-container {
@@ -529,7 +625,7 @@ swiper-container {
 
 swiper-slide {
   text-align: center;
-  font-size: 18px;
+  font-size: 1.125rem;
   background: var(--text-color);
   display: flex;
   justify-content: center;
@@ -561,9 +657,9 @@ swiper-container::part(button-next) {
 
 .prices {
   background-color: var(--secondary-color);
-  margin-top: 60px;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  margin-top: 3.75rem;
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
   background-image: url("../images/photo.webp");
   background-repeat: no-repeat;
   background-position: 50% 40%;
@@ -573,7 +669,7 @@ swiper-container::part(button-next) {
   font-family: inherit;
   color: var(--text-color);
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 
 .prices__card {
@@ -584,14 +680,14 @@ swiper-container::part(button-next) {
   font-family: inherit;
   color: var(--secondary-color);
   font-weight: bold;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .card__price {
   font-family: inherit;
   color: var(--extra-optional-color);
   font-weight: bold;
-  font-size: 24px;
+  font-size: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -603,12 +699,12 @@ swiper-container::part(button-next) {
   text-align: center;
   color: var(--secondary-color);
   font-size: inherit;
-  padding: 10px;
+  padding: 0.625rem;
   transition: background-color var(--main-animation),
     color var(--main-animation);
   cursor: pointer;
   background-color: var(--hover-color);
-  border-radius: 20px;
+  border-radius: 1.25rem;
   border-color: transparent;
   width: 80%;
 }
@@ -623,22 +719,22 @@ swiper-container::part(button-next) {
 /* QUESTIONS */
 
 .questions {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
 }
 
 .questions__title {
   font-family: inherit;
   color: var(--secondary-color);
   text-align: left;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 
 .faq {
   cursor: pointer;
-  border-bottom: 2px solid var(--secondary-color);
-  margin-top: 30px;
-  padding-bottom: 15px;
+  border-bottom: 0.125rem solid var(--secondary-color);
+  margin-top: 1.875rem;
+  padding-bottom: 0.9375rem;
 }
 
 .faq.active .answer {
@@ -659,12 +755,12 @@ swiper-container::part(button-next) {
 .question__text {
   font-family: inherit;
   color: var(--secondary-color);
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .question__icon {
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   transition: transform var(--main-animation);
 }
 
@@ -672,7 +768,7 @@ swiper-container::part(button-next) {
   width: 100%;
   max-height: 0;
   overflow: hidden;
-  margin-top: 15px;
+  margin-top: 0.9375rem;
   transition: max-height var(--main-animation);
 }
 
@@ -681,7 +777,7 @@ swiper-container::part(button-next) {
 }
 
 .answer-numbered-list {
-  margin-top: 10px;
+  margin-top: 0.625rem;
   list-style: decimal;
 }
 
@@ -693,8 +789,8 @@ swiper-container::part(button-next) {
   font-family: inherit;
   color: var(--secondary-color);
   font-size: inherit;
-  margin-bottom: 10px;
-  margin-left: 20px;
+  margin-bottom: 0.625rem;
+  margin-left: 1.25rem;
 }
 
 .answer-list__item-extra {
@@ -703,13 +799,13 @@ swiper-container::part(button-next) {
   font-size: inherit;
   font-weight: bold;
   list-style: none;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 @keyframes fade {
   from {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-0.625rem);
   }
   to {
     opacity: 1;
@@ -723,8 +819,8 @@ swiper-container::part(button-next) {
 
 .contacts {
   background-color: var(--secondary-color);
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
 }
 
 .contacts__title {
@@ -751,27 +847,27 @@ swiper-container::part(button-next) {
 
 .contacts__form-name {
   width: 100%;
-  height: 44px;
+  height: 2.75rem;
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid var(--main-color);
+  border-bottom: 0.125rem solid var(--main-color);
   outline: none;
-  margin-bottom: 60px;
+  margin-bottom: 3.75rem;
   color: var(--text-color);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: inherit;
 }
 
 .contacts__form-phone {
   width: 100%;
-  height: 44px;
+  height: 2.75rem;
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid var(--main-color);
+  border-bottom: 0.125rem solid var(--main-color);
   outline: none;
-  margin-bottom: 100px;
+  margin-bottom: 6.25rem;
   color: var(--text-color);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: inherit;
 }
 
@@ -779,7 +875,7 @@ label {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 5px 0;
+  padding: 0.3125rem 0;
   font-size: inherit;
   font-family: inherit;
   color: var(--text-color);
@@ -789,10 +885,10 @@ label {
 
 .contacts__user-box input:focus ~ label,
 .contacts__user-box input:valid ~ label {
-  top: -20px;
+  top: -1.25rem;
   left: 0;
   color: var(--hover-color);
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .contacts-wrapper {
@@ -801,19 +897,19 @@ label {
 
 .contacts__list {
   display: flex;
-  gap: 15px;
+  gap: 0.9375rem;
 }
 
 .contacts__button {
   font-family: inherit;
   color: var(--secondary-color);
   font-size: inherit;
-  padding: 10px;
+  padding: 0.625rem;
   transition: background-color var(--main-animation),
     color var(--main-animation);
   cursor: pointer;
   background-color: var(--hover-color);
-  border-radius: 20px;
+  border-radius: 1.25rem;
   border-color: transparent;
   width: 50%;
 }
@@ -829,17 +925,17 @@ label {
 
 footer {
   background-color: var(--secondary-color);
-  border-top: 1px solid var(--extra-optional-color);
+  border-top: 0.0625rem solid var(--extra-optional-color);
 }
 
 .footer-wrapper {
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 .footer__contact-email {
   display: flex;
   justify-content: center;
-  gap: 5px;
+  gap: 0.3125rem;
   font-family: inherit;
   color: var(--optional-color);
   font-size: inherit;
@@ -850,7 +946,7 @@ footer {
 .footer__contact-phone {
   display: flex;
   justify-content: center;
-  gap: 5px;
+  gap: 0.3125rem;
   font-family: inherit;
   color: var(--optional-color);
   font-size: inherit;
@@ -869,19 +965,19 @@ footer {
 }
 
 .contact__icon {
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .footer__list {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 0.9375rem;
 }
 
 .footer__item {
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
 }
 
 .footer__link {
@@ -900,18 +996,17 @@ footer {
 }
 
 .footer__icon {
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
   fill: var(--secondary-color);
 }
 
 .footer__text {
   text-align: center;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: var(--extra-optional-color);
-
-  margin-top: 100px;
-  padding: 10px;
+  margin-top: 6.25rem;
+  padding: 0.625rem;
 }
 
 /* FOOTER */
