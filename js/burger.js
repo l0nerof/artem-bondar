@@ -20,17 +20,20 @@ MenuLinks.fifth.addEventListener("click", toggleMenu);
 MenuLinks.seventh.addEventListener("click", toggleMenu);
 
 function toggleMenu() {
-  const isMenuOpen = menuIcon.classList.toggle("active");
-  menu.classList.toggle("is-open");
+  const isMenuOpen = menu.classList.toggle("is-open");
 
-  const scrollLockMethod = !isMenuOpen
-    ? "disableBodyScroll"
-    : "enableBodyScroll";
-  bodyScrollLock[scrollLockMethod](document.body);
+  menuIcon.classList.toggle("active");
+
+  if (isMenuOpen) {
+    bodyScrollLock.disableBodyScroll(document.body);
+  } else {
+    bodyScrollLock.enableBodyScroll(document.body);
+  }
 }
 
 window.matchMedia("(min-width: 768px)").addEventListener("change", (e) => {
   if (!e.matches) return;
+  menuIcon.classList.remove("active");
   menu.classList.remove("is-open");
   bodyScrollLock.enableBodyScroll(document.body);
 });
