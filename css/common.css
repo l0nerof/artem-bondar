@@ -10,6 +10,8 @@
   --extra-optional-color: #6e6e6e;
   --hover-color: #caff34;
   --darker-hover-color: #7da01e;
+  --error-color: #de1a24;
+  --success-color: #056517;
   --main-font: "Inter", sans-serif;
   --main-animation: 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -61,7 +63,7 @@ img {
 }
 
 [class$="-container"] {
-  max-width: 985px;
+  max-width: 61.5625rem;
   margin: 0 auto;
 }
 
@@ -69,7 +71,7 @@ img {
 
 @media screen and (min-width: 320px) {
   [class$="-container"] {
-    width: 320px;
+    width: 20rem;
     margin: 0 auto;
   }
 
@@ -201,11 +203,11 @@ img {
   }
 
   swiper-container {
-    height: 400px;
+    height: 25rem;
   }
 
   .prices {
-    background-size: 520px 450px;
+    background-size: 32.5rem 28.125rem;
   }
 
   .prices__title {
@@ -217,8 +219,8 @@ img {
   }
 
   .prices__card {
-    width: 300px;
-    height: 300px;
+    width: 18.75rem;
+    height: 18.75rem;
     margin: 5.625rem 0 0;
     padding: 0.625rem;
   }
@@ -241,7 +243,7 @@ img {
   }
 
   .question__text {
-    max-width: 300px;
+    max-width: 18.75rem;
   }
 
   .contacts__title {
@@ -273,7 +275,7 @@ img {
 
 @media screen and (min-width: 480px) {
   [class$="-container"] {
-    width: 480px;
+    width: 30rem;
     margin: 0 auto;
   }
 
@@ -284,7 +286,7 @@ img {
 
 @media screen and (min-width: 768px) {
   [class$="-container"] {
-    width: 768px;
+    width: 48rem;
     margin: 0 auto;
   }
 
@@ -331,11 +333,11 @@ img {
   }
 
   swiper-container {
-    height: 500px;
+    height: 31.25rem;
   }
 
   .prices {
-    background-size: 820px 350px;
+    background-size: 51.25rem 21.875rem;
   }
 
   .prices__title {
@@ -349,7 +351,7 @@ img {
   }
 
   .prices__card {
-    width: 360px;
+    width: 22.5rem;
     margin: 5.625rem 2.5rem 0;
   }
 
@@ -358,7 +360,7 @@ img {
   }
 
   .question__text {
-    max-width: 500px;
+    max-width: 31.25rem;
   }
 
   .contacts__title {
@@ -371,7 +373,7 @@ img {
   }
 
   .contacts__form-wrapper {
-    max-width: 280px;
+    max-width: 17.5rem;
   }
 
   .footer-wrapper {
@@ -396,7 +398,7 @@ img {
 
 @media screen and (min-width: 985px) {
   [class$="-container"] {
-    width: 985px;
+    width: 61.5625rem;
     margin: 0 auto;
   }
 
@@ -409,15 +411,15 @@ img {
   }
 
   swiper-container {
-    height: 600px;
+    height: 37.5rem;
   }
 
   .prices {
-    background-size: 1200px 450px;
+    background-size: 75rem 28.125rem;
   }
 
   .prices__card {
-    height: 400px;
+    height: 25rem;
   }
 
   .card__title {
@@ -434,11 +436,11 @@ img {
   }
 
   .question__text {
-    max-width: 960px;
+    max-width: 60rem;
   }
 
   .contacts__form-wrapper {
-    max-width: 470px;
+    max-width: 29.375rem;
   }
 
   .footer__contact-email {
@@ -519,13 +521,13 @@ img {
   font-family: inherit;
   color: var(--secondary-color);
   background-color: var(--hover-color);
-  max-width: 421px;
+  max-width: 26.3125rem;
   margin-top: 2.625rem;
 }
 
 .hero__img {
-  width: 537px;
-  height: 669px;
+  width: 33.5625rem;
+  height: 41.8125rem;
 }
 
 /* HERO */
@@ -556,7 +558,7 @@ img {
 }
 
 .about-me-wrapper {
-  max-width: 450px;
+  max-width: 28.125rem;
 }
 
 .about-me__text {
@@ -738,7 +740,7 @@ swiper-container::part(button-next) {
 }
 
 .faq.active .answer {
-  max-height: 655px;
+  max-height: 40.9375rem;
   animation: fade var(--main-animation);
 }
 
@@ -856,6 +858,7 @@ swiper-container::part(button-next) {
   color: var(--text-color);
   font-size: 0.875rem;
   font-family: inherit;
+  transition: border-bottom var(--main-animation);
 }
 
 .contacts__form-phone {
@@ -869,6 +872,23 @@ swiper-container::part(button-next) {
   color: var(--text-color);
   font-size: 0.875rem;
   font-family: inherit;
+  transition: border-bottom var(--main-animation);
+}
+
+.contacts__form-name.success {
+  border-bottom: 0.125rem solid var(--success-color);
+}
+
+.contacts__form-phone.success {
+  border-bottom: 0.125rem solid var(--success-color);
+}
+
+.contacts__form-name.error {
+  border-bottom: 0.125rem solid var(--error-color);
+}
+
+.contacts__form-phone.error {
+  border-bottom: 0.125rem solid var(--error-color);
 }
 
 label {
@@ -892,7 +912,7 @@ label {
 }
 
 .contacts-wrapper {
-  max-width: 470px;
+  max-width: 29.375rem;
 }
 
 .contacts__list {
